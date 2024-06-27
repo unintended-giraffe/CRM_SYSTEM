@@ -1,0 +1,233 @@
+:root {
+  --primary-color: #5d4037;
+  --secondary-color: #795548;
+  --background-color: #f5f5f5;
+  --text-color: #3e2723;
+  --border-color: #d7ccc8;
+  --accent-color: #8d6e63;
+  --success-color: #4caf50;
+  --danger-color: #f44336;
+  --light-beige: #efebe9;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.crm-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+header {
+  background-color: var(--primary-color);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: var(--light-beige);
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+nav {
+  display: flex;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: var(--light-beige);
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-btn.active, .nav-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+main {
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 40px;
+}
+
+h1 {
+  font-size: 32px;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.content-wrapper {
+  background-color: var(--light-beige);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* Table Styles */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--light-beige);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Button Styles */
+.add-btn, .submit-btn, .cancel-btn, .action-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.add-btn, .submit-btn {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.add-btn:hover, .submit-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+.cancel-btn {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.cancel-btn:hover {
+  background-color: #bcaaa4;
+}
+
+.action-btn {
+  background: none;
+  color: var(--accent-color);
+  padding: 5px 10px;
+}
+
+.action-btn:hover {
+  background-color: var(--light-beige);
+}
+
+.action-btn.delete-btn {
+  color: var(--danger-color);
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--secondary-color);
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  background-color: white;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 20px;
+  }
+}
+.footer-banner {
+  background-color: var(--primary-color);
+  color: var(--light-beige);
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.company-name {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.disclaimer {
+  font-size: 12px;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.4;
+}
+
+/* Adjust main content to account for footer */
+.crm-container {
+  padding-bottom: 150px; /* Adjust this value based on the height of your footer */
+}
